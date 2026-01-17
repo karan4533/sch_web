@@ -1,5 +1,5 @@
 import React from "react";
-import SchoolHero from "@/components/Home/SchoolHero";
+import HeroSlider from "@/components/Home/HeroSlider";
 import SchoolIntro from "@/components/Home/SchoolIntro";
 import WhyChooseUs from "@/components/Home/WhyChooseUs";
 import NewsEvents from "@/components/Home/NewsEvents";
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main>
-      <SchoolHero />
+      <HeroSlider />
       <SchoolIntro />
       <WhyChooseUs />
       <NewsEvents />
