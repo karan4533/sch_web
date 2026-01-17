@@ -1,24 +1,24 @@
 import React from "react";
-import Hero from "@/components/Home/Hero";
-import Companies from "@/components/Home/Companies";
-import Courses from "@/components/Home/Courses";
-import Mentor from "@/components/Home/Mentor";
+import SchoolHero from "@/components/Home/SchoolHero";
+import SchoolIntro from "@/components/Home/SchoolIntro";
+import WhyChooseUs from "@/components/Home/WhyChooseUs";
+import NewsEvents from "@/components/Home/NewsEvents";
 import Testimonial from "@/components/Home/Testimonials";
-import Newsletter from "@/components/Home/Newsletter";
 import { Metadata } from "next";
+
 export const metadata: Metadata = {
-  title: "eLearning",
+  title: "Excellence Academy - Nurturing Young Minds | CBSE School",
+  description: "Excellence Academy provides world-class holistic education, nurturing excellence, values, and a passion for lifelong learning. Affiliated to CBSE.",
 };
 
 export default function Home() {
   return (
     <main>
-      <Hero />
-      <Companies />
-      <Courses />
-      <Mentor />
+      <SchoolHero />
+      <SchoolIntro />
+      <WhyChooseUs />
+      <NewsEvents />
       <Testimonial />
-      <Newsletter />
     </main>
   );
 }
