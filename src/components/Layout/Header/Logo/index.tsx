@@ -5,7 +5,7 @@ import { Icon } from "@iconify/react";
 
 const Logo: React.FC = () => {
   return (
-    <Link href="/">
+    <Link href="/" className="flex items-center gap-4">
       <Image
         src="/images/logo/school_logo.png"
         alt="Nam Vidhya Mandir Logo"
@@ -14,6 +14,9 @@ const Logo: React.FC = () => {
         className="w-auto h-16 sm:h-20"
         quality={100}
       />
+      <div>
+        <h1 className="text-2xl md:text-3xl font-bold text-gray-900 leading-none">Nam Vidhya Mandir</h1>
+      </div>
     </Link>
   );
 };
