@@ -46,6 +46,30 @@ const HeroSlider: React.FC = () => {
             cta: { text: "Sports & Activities", href: "/activities" },
             secondaryCta: { text: "Achievements", href: "/achievements" },
         },
+        {
+            id: 4,
+            image: "/images/slider/slide4.png",
+            title: "Expert Faculty",
+            subtitle: "Learn from the best minds dedicated to shaping the leaders of tomorrow with personalized attention.",
+            cta: { text: "Meet Our Team", href: "/faculty" },
+            secondaryCta: { text: "Join Us", href: "/careers" },
+        },
+        {
+            id: 5,
+            image: "/images/slider/slide5.png",
+            title: "Vibrant Community",
+            subtitle: "A home away from home where every student feels valued, celebrated, and supported in their journey.",
+            cta: { text: "Life at School", href: "/community" },
+            secondaryCta: { text: "Events", href: "/events" },
+        },
+        {
+            id: 6,
+            image: "/images/slider/slide6.png",
+            title: "Future-Ready Learning",
+            subtitle: "Equipping students with 21st-century skills through innovation, coding, and robotics labs.",
+            cta: { text: "Innovation Lab", href: "/innovation" },
+            secondaryCta: { text: "Student Projects", href: "/projects" },
+        },
     ];
 
     return (
