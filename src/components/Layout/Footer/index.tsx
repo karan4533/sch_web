@@ -67,7 +67,7 @@ const footer = () => {
         </div>
 
         <div className='mt-10 border-t border-gray-200 pt-6 text-center'>
-          <h4 className='text-black/50 text-sm font-normal'>@2025 Nam Vidhya Mandir. All Rights Reserved.</h4>
+          <h4 className='text-black/50 text-sm font-normal'>@2026 Nam Vidhya Mandir. All Rights Reserved.</h4>
         </div>
       </div>
     </footer>
