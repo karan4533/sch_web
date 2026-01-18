@@ -19,7 +19,7 @@ const VideoSection: React.FC = () => {
                     </p>
                 </div>
 
-                <div className="relative max-w-3xl mx-auto rounded-3xl overflow-hidden shadow-2xl group" data-aos="zoom-in">
+                <div className="relative max-w-xl mx-auto w-full rounded-2xl overflow-hidden shadow-2xl group" data-aos="zoom-in">
                     <a
                         href="https://youtube.com/@namvidhyamandir526?si=Cj4Jv-oI3I4luX4j"
                         target="_blank"

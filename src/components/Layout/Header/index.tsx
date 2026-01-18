@@ -61,7 +61,19 @@ const Header: React.FC = () => {
           <Logo />
           <nav className="hidden lg:flex flex-grow items-center gap-8 justify-center">
             {headerData.map((item, index) => (
-              <HeaderLink key={index} item={item} />
+              item.label === "Admission Form" ? (
+                <Link
+                  key={index}
+                  href={item.href}
+                  target="_blank"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-semibold transition-all duration-300 shadow-md hover:shadow-lg flex items-center gap-2 transform hover:-translate-y-0.5"
+                >
+                  <Icon icon="mdi:file-document-outline" className="text-xl" />
+                  {item.label}
+                </Link>
+              ) : (
+                <HeaderLink key={index} item={item} />
+              )
             ))}
           </nav>
           <div className="flex items-center gap-4">
@@ -70,31 +82,28 @@ const Header: React.FC = () => {
               className="block lg:hidden p-2 rounded-lg"
               aria-label="Toggle mobile menu"
             >
-              <span className="block w-6 h-0.5 bg-white"></span>
-              <span className="block w-6 h-0.5 bg-white mt-1.5"></span>
-              <span className="block w-6 h-0.5 bg-white mt-1.5"></span>
+              <span className="block w-6 h-0.5 bg-black"></span>
+              <span className="block w-6 h-0.5 bg-black mt-1.5"></span>
+              <span className="block w-6 h-0.5 bg-black mt-1.5"></span>
             </button>
           </div>
         </div>
         {navbarOpen && (
-          <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-40" />
+          <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-40" onClick={() => setNavbarOpen(false)} />
         )}
         <div
           ref={mobileMenuRef}
-          className={`lg:hidden fixed top-0 right-0 h-full w-full bg-darkmode shadow-lg transform transition-transform duration-300 max-w-xs ${navbarOpen ? "translate-x-0" : "translate-x-full"
-            } z-50`}
+          className={`lg:hidden fixed top-0 right-0 h-full w-full bg-white shadow-2xl transform transition-transform duration-300 max-w-sm ${navbarOpen ? "translate-x-0" : "translate-x-full"
+            } z-50 overflow-y-auto`}
         >
-          <div className="flex items-center justify-between p-4">
-            <h2 className="text-lg font-bold text-midnight_text dark:text-midnight_text">
-              <Logo />
-            </h2>
-
-            {/*  */}
+          <div className="flex items-center justify-end p-6 border-b border-gray-100">
             <button
               onClick={() => setNavbarOpen(false)}
-              className="bg-[url('/images/closed.svg')] bg-no-repeat bg-contain w-5 h-5 absolute top-0 right-0 mr-8 mt-8 dark:invert"
-              aria-label="Close menu Modal"
-            ></button>
+              className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors"
+              aria-label="Close menu"
+            >
+              <Icon icon="mdi:close" className="text-3xl text-gray-600" />
+            </button>
           </div>
           <nav className="flex flex-col items-start p-4">
             {headerData.map((item, index) => (

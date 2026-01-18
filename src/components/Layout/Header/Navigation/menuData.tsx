@@ -31,5 +31,5 @@ export const headerData: HeaderItem[] = [
     ]
   },
   { label: "Gallery", href: "/gallery" },
-  { label: "Admissions", href: "/admissions" },
+  { label: "Admission Form", href: "https://namvidhyamandir.com/static/media/NAM_Admission_Form.617529b1.pdf" },
 ];
