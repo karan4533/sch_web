@@ -55,71 +55,28 @@ const SchoolIntro: React.FC = () => {
                         {/* Section Label */}
                         <div className="inline-block">
                             <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider bg-blue-50 px-4 py-2 rounded-full">
-                                About Our School
+                                Our Objectives
                             </span>
                         </div>
 
                         {/* Heading */}
                         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                            Nurturing Excellence in
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600"> Every Child</span>
+                            The Objectives of
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600"> Nam Vidhya Mandir</span>
                         </h2>
 
                         {/* Description */}
-                        <p className="text-lg text-gray-600 leading-relaxed">
-                            Excellence Academy has been established with the ennobling vision of empowering every child
-                            by providing world-class holistic education. We believe that children flourish and can be
-                            nurtured only in an environment of excellence.
-                        </p>
-
-                        <p className="text-lg text-gray-600 leading-relaxed">
-                            Our faculty, teaching pedagogy, and facilities are of truly world-class standards which
-                            kindle a love for learning, a respect for cultural diversity, and a strong sense of social
-                            responsibility among students.
-                        </p>
-
-                        {/* Core Values */}
-                        <div className="grid grid-cols-2 gap-4 pt-4">
-                            <div className="flex items-start gap-3 p-4 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors duration-300">
-                                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <Icon icon="mdi:lightbulb-on-outline" className="text-white text-2xl" />
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-gray-900 mb-1">Innovation</h4>
-                                    <p className="text-sm text-gray-600">Modern teaching methods</p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-start gap-3 p-4 bg-green-50 rounded-xl hover:bg-green-100 transition-colors duration-300">
-                                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <Icon icon="mdi:account-heart-outline" className="text-white text-2xl" />
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-gray-900 mb-1">Care</h4>
-                                    <p className="text-sm text-gray-600">Individual attention</p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-start gap-3 p-4 bg-purple-50 rounded-xl hover:bg-purple-100 transition-colors duration-300">
-                                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <Icon icon="mdi:earth" className="text-white text-2xl" />
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-gray-900 mb-1">Global Vision</h4>
-                                    <p className="text-sm text-gray-600">International standards</p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-start gap-3 p-4 bg-orange-50 rounded-xl hover:bg-orange-100 transition-colors duration-300">
-                                <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <Icon icon="mdi:shield-check-outline" className="text-white text-2xl" />
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-gray-900 mb-1">Integrity</h4>
-                                    <p className="text-sm text-gray-600">Strong moral values</p>
-                                </div>
-                            </div>
-                        </div>
+                        <ul className="space-y-4 text-lg text-gray-600 leading-relaxed list-disc pl-5">
+                            <li>Achieve cognitive, affective and psychomotor excellence</li>
+                            <li>To enhance self-awareness and explore innate potential</li>
+                            <li>To acquire the ability to utilize technology and information for the betterment of humankind</li>
+                            <li>To promote physical fitness, health and well-being</li>
+                            <li>To strengthen knowledge and attitude related to livelihood skills</li>
+                            <li>To promote goal setting, and lifelong learning</li>
+                            <li>To imbibe 21st century learning, literacy and life skills</li>
+                            <li>To develop the ability to appreciate art and show case talents</li>
+                            <li>To promote arts integrated learning</li>
+                        </ul>
 
                         {/* CTA Button */}
                         <div className="pt-4">

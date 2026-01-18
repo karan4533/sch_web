@@ -25,8 +25,8 @@ const HeroSlider: React.FC = () => {
         {
             id: 1,
             image: "/images/slider/slide1.png",
-            title: "Welcome to Excellence Academy",
-            subtitle: "Empowering young minds with world-class holistic education, nurturing excellence, values, and a passion for lifelong learning.",
+            title: "Welcome To Nam Vidhya Mandir",
+            subtitle: "Our vision is to empower students to acquire, demonstrate, articulate and value knowledge and skills that will support them, as life-long learners, to participate in and contribute to the global world and practise the core values of the school: respect, tolerance & inclusion, and excellence.",
             cta: { text: "Apply Now", href: "/admissions" },
             secondaryCta: { text: "Learn More", href: "/about-us" },
         },
