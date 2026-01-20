@@ -155,4 +155,4 @@ For any queries or support, please contact the school administration.
 
 ---
 
-**Nam Vidhya Mandir** - Achieving Excellence through Holistic Education
+**Karan :)** 
