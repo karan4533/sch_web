@@ -1,4 +1,4 @@
-# Nam Vidhya Mandir - School Websitessssssssssssss
+# Nam Vidhya Mandir - School Website
 
 A modern, responsive school website built with Next.js, React, and TypeScript. This project provides a comprehensive platform for showcasing school information, academics, events, and more.
 
