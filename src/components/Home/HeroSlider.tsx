@@ -24,7 +24,7 @@ const HeroSlider: React.FC = () => {
     const slides = [
         {
             id: 1,
-            image: "/images/slider/slide1.png",
+            image: "/images/hero%20page/a2dea5f1-424c-4736-a3dd-d50401505e9e.jpg",
             title: "Welcome To Nam Vidhya Mandir",
             subtitle: "Our vision is to empower students to acquire, demonstrate, articulate and value knowledge and skills that will support them, as life-long learners, to participate in and contribute to the global world and practise the core values of the school: respect, tolerance & inclusion, and excellence.",
             cta: { text: "Apply Now", href: "/admissions" },
@@ -32,7 +32,7 @@ const HeroSlider: React.FC = () => {
         },
         {
             id: 2,
-            image: "/images/slider/slide2.png",
+            image: "/images/hero%20page/ad27389d-8572-4a35-bede-45f4cf14b57d.jpg",
             title: "Modern Smart Classrooms",
             subtitle: "Experience learning like never before with our state-of-the-art technology and interactive learning environments.",
             cta: { text: "Explore Academics", href: "/academics" },
@@ -40,7 +40,7 @@ const HeroSlider: React.FC = () => {
         },
         {
             id: 3,
-            image: "/images/slider/slide3.png",
+            image: "/images/hero%20page/b9319b48-dfa2-44d2-96f8-5cc351d05913.jpg",
             title: "Holistic Development",
             subtitle: "From sports to arts, we provide a platform for every student to discover and groom their unique talents.",
             cta: { text: "Sports & Activities", href: "/activities" },
@@ -48,27 +48,11 @@ const HeroSlider: React.FC = () => {
         },
         {
             id: 4,
-            image: "/images/slider/slide4.png",
+            image: "/images/hero%20page/dd93a8d8-ecaf-4062-85a4-8f5c0447394b.jpg",
             title: "Expert Faculty",
             subtitle: "Learn from the best minds dedicated to shaping the leaders of tomorrow with personalized attention.",
             cta: { text: "Meet Our Team", href: "/faculty" },
             secondaryCta: { text: "Join Us", href: "/careers" },
-        },
-        {
-            id: 5,
-            image: "/images/slider/slide5.png",
-            title: "Vibrant Community",
-            subtitle: "A home away from home where every student feels valued, celebrated, and supported in their journey.",
-            cta: { text: "Life at School", href: "/community" },
-            secondaryCta: { text: "Events", href: "/events" },
-        },
-        {
-            id: 6,
-            image: "/images/slider/slide6.png",
-            title: "Future-Ready Learning",
-            subtitle: "Equipping students with 21st-century skills through innovation, coding, and robotics labs.",
-            cta: { text: "Innovation Lab", href: "/innovation" },
-            secondaryCta: { text: "Student Projects", href: "/projects" },
         },
     ];
 
