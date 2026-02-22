@@ -63,6 +63,10 @@ const footer = () => {
               <Icon icon="tabler:mail" className="text-primary text-3xl inline-block me-2" />
               <h5 className="text-lg text-black/60">namvidhyamandir@gmail.com</h5>
             </div>
+            <Link href="https://wa.me/917397615166" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 mt-6 hover:text-primary transition-colors">
+              <Icon icon="tabler:brand-whatsapp" className="text-primary text-3xl inline-block me-2" />
+              <h5 className="text-lg text-black/60">WhatsApp: 7397615166</h5>
+            </Link>
           </div>
         </div>
 
