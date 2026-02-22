@@ -32,10 +32,10 @@ const HeaderLink: React.FC<{ item: HeaderItem }> = ({ item }) => {
       onMouseLeave={handleMouseLeave}
     >
       <Link
-        href={`/${item.href}`}
-        className={`text-lg flex hover:text-black capitalized relative ${isActive
-            ? "text-black after:absolute after:w-8 after:h-1 after:bg-primary after:rounded-full after:-bottom-1"
-            : "text-grey"
+        href={item.href}
+        className={`text-sm xl:text-base font-medium flex items-center hover:text-blue-600 transition-colors relative whitespace-nowrap ${isActive
+            ? "text-blue-600 after:absolute after:w-full after:h-0.5 after:bg-primary after:rounded-full after:-bottom-1"
+            : "text-gray-700"
           }`}
       >
         {item.label}
