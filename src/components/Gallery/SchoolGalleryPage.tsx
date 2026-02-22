@@ -72,7 +72,7 @@ const SchoolGalleryPage: React.FC = () => {
     return (
         <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
             {/* Hero Banner */}
-            <div className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 py-32 lg:mt-24 mt-20">
+            <div className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 py-20 sm:py-28 lg:py-32 lg:mt-24 mt-20">
                 <div className="absolute inset-0 opacity-10">
                     <div className="grid grid-cols-6 gap-1 h-full overflow-hidden">
                         {allImages.slice(0, 6).map((img, i) => (
@@ -82,29 +82,29 @@ const SchoolGalleryPage: React.FC = () => {
                         ))}
                     </div>
                 </div>
-                <div className="relative z-10 container mx-auto px-4 text-center">
-                    <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium mb-6 border border-white/30">
-                        <Icon icon="mdi:image-multiple" className="text-lg" />
+                <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center">
+                    <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6 border border-white/30">
+                        <Icon icon="mdi:image-multiple" className="text-base sm:text-lg" />
                         School Gallery
                     </div>
-                    <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
+                    <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-white mb-3 sm:mb-4">
                         Our School in Pictures
                     </h1>
-                    <p className="text-blue-100 text-xl max-w-2xl mx-auto">
+                    <p className="text-blue-100 text-base sm:text-xl max-w-2xl mx-auto px-2">
                         Relive the cherished moments, events, and everyday life at Nam Vidhya Mandir.
                     </p>
-                    <p className="text-white/60 mt-3">{allImages.length} photos</p>
+                    <p className="text-white/60 mt-2 sm:mt-3 text-sm">{allImages.length} photos</p>
                 </div>
             </div>
 
             {/* Gallery Grid */}
-            <div className="container mx-auto px-4 lg:max-w-screen-xl py-16">
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="container mx-auto px-3 sm:px-4 lg:px-8 lg:max-w-screen-xl py-10 sm:py-14 lg:py-16">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3 lg:gap-4">
                     {allImages.map((img, index) => (
                         <button
                             key={index}
                             onClick={() => openLightbox(index)}
-                            className="relative aspect-square rounded-xl overflow-hidden group shadow-md hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-400"
+                            className="relative aspect-square rounded-lg sm:rounded-xl overflow-hidden group shadow-md hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-400 touch-manipulation"
                         >
                             <Image
                                 src={img.src}
@@ -116,11 +116,11 @@ const SchoolGalleryPage: React.FC = () => {
                             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
                                 <Icon
                                     icon="mdi:magnify-plus-outline"
-                                    className="text-white text-5xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg"
+                                    className="text-white text-3xl sm:text-5xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg"
                                 />
                             </div>
-                            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                                <p className="text-white text-sm font-medium">{img.alt}</p>
+                            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2 sm:p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                <p className="text-white text-xs sm:text-sm font-medium">{img.alt}</p>
                             </div>
                         </button>
                     ))}
@@ -136,29 +136,29 @@ const SchoolGalleryPage: React.FC = () => {
                     {/* Close button */}
                     <button
                         onClick={closeLightbox}
-                        className="absolute top-4 right-4 z-50 w-12 h-12 bg-white/10 hover:bg-white/25 text-white rounded-full flex items-center justify-center transition-colors"
+                        className="absolute top-3 right-3 sm:top-4 sm:right-4 z-50 w-10 h-10 sm:w-12 sm:h-12 bg-white/10 hover:bg-white/25 active:bg-white/40 text-white rounded-full flex items-center justify-center transition-colors touch-manipulation"
                         aria-label="Close"
                     >
-                        <Icon icon="mdi:close" className="text-2xl" />
+                        <Icon icon="mdi:close" className="text-xl sm:text-2xl" />
                     </button>
 
                     {/* Counter */}
-                    <div className="absolute top-4 left-1/2 -translate-x-1/2 text-white/70 text-sm font-medium bg-black/40 px-4 py-1.5 rounded-full">
+                    <div className="absolute top-3 left-1/2 -translate-x-1/2 text-white/70 text-xs sm:text-sm font-medium bg-black/40 px-3 py-1 sm:px-4 sm:py-1.5 rounded-full">
                         {lightboxIndex + 1} / {allImages.length}
                     </div>
 
                     {/* Prev */}
                     <button
                         onClick={(e) => { e.stopPropagation(); goPrev(); }}
-                        className="absolute left-4 z-50 w-12 h-12 bg-white/10 hover:bg-white/25 text-white rounded-full flex items-center justify-center transition-colors"
+                        className="absolute left-2 sm:left-4 z-50 w-10 h-10 sm:w-12 sm:h-12 bg-white/10 hover:bg-white/25 active:bg-white/40 text-white rounded-full flex items-center justify-center transition-colors touch-manipulation"
                         aria-label="Previous"
                     >
-                        <Icon icon="mdi:chevron-left" className="text-3xl" />
+                        <Icon icon="mdi:chevron-left" className="text-2xl sm:text-3xl" />
                     </button>
 
                     {/* Image */}
                     <div
-                        className="relative w-full h-full max-w-5xl max-h-[85vh] mx-16"
+                        className="relative w-full h-full max-w-5xl max-h-[80vh] sm:max-h-[85vh] mx-14 sm:mx-16"
                         onClick={(e) => e.stopPropagation()}
                     >
                         <Image
@@ -174,14 +174,14 @@ const SchoolGalleryPage: React.FC = () => {
                     {/* Next */}
                     <button
                         onClick={(e) => { e.stopPropagation(); goNext(); }}
-                        className="absolute right-4 z-50 w-12 h-12 bg-white/10 hover:bg-white/25 text-white rounded-full flex items-center justify-center transition-colors"
+                        className="absolute right-2 sm:right-4 z-50 w-10 h-10 sm:w-12 sm:h-12 bg-white/10 hover:bg-white/25 active:bg-white/40 text-white rounded-full flex items-center justify-center transition-colors touch-manipulation"
                         aria-label="Next"
                     >
-                        <Icon icon="mdi:chevron-right" className="text-3xl" />
+                        <Icon icon="mdi:chevron-right" className="text-2xl sm:text-3xl" />
                     </button>
 
                     {/* Caption */}
-                    <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/80 text-sm font-medium bg-black/40 backdrop-blur-sm px-6 py-2 rounded-full">
+                    <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 text-white/80 text-xs sm:text-sm font-medium bg-black/40 backdrop-blur-sm px-4 sm:px-6 py-1.5 sm:py-2 rounded-full whitespace-nowrap">
                         {allImages[lightboxIndex].alt}
                     </div>
                 </div>

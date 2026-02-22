@@ -55,18 +55,18 @@ const WhyChooseUs: React.FC = () => {
     };
 
     return (
-        <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-gray-50 to-white">
             <div className="container mx-auto px-4 lg:max-w-screen-xl">
                 {/* Section Header */}
-                <div className="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
-                    <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider bg-blue-50 px-4 py-2 rounded-full inline-block mb-4">
+                <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14 lg:mb-16 px-2" data-aos="fade-up">
+                    <span className="text-blue-600 font-semibold text-xs sm:text-sm uppercase tracking-wider bg-blue-50 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full inline-block mb-3 sm:mb-4">
                         Our Strengths
                     </span>
-                    <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
                         Why Choose
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600"> Excellence Academy?</span>
                     </h2>
-                    <p className="text-lg text-gray-600">
+                    <p className="text-base sm:text-lg text-gray-600">
                         We provide an exceptional educational experience that goes beyond textbooks,
                         nurturing well-rounded individuals ready to make a positive impact on the world.
                     </p>
@@ -104,23 +104,23 @@ const WhyChooseUs: React.FC = () => {
                 </div>
 
                 {/* Bottom Stats */}
-                <div className="mt-20 bg-gradient-to-r from-blue-600 to-green-600 rounded-3xl p-12 text-white" data-aos="fade-up">
-                    <div className="grid md:grid-cols-4 gap-8 text-center">
-                        <div className="space-y-2">
-                            <div className="text-5xl font-bold">120+</div>
-                            <div className="text-blue-100 text-sm uppercase tracking-wider">Teaching & Non-Teaching Staff</div>
+                <div className="mt-12 sm:mt-16 lg:mt-20 bg-gradient-to-r from-blue-600 to-green-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 text-white" data-aos="fade-up">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center">
+                        <div className="space-y-1 sm:space-y-2">
+                            <div className="text-3xl sm:text-4xl md:text-5xl font-bold">120+</div>
+                            <div className="text-blue-100 text-xs sm:text-sm uppercase tracking-wider leading-tight">Teaching & Non-Teaching Staff</div>
                         </div>
-                        <div className="space-y-2">
-                            <div className="text-5xl font-bold">1500+</div>
-                            <div className="text-blue-100 text-sm uppercase tracking-wider">Happy Students</div>
+                        <div className="space-y-1 sm:space-y-2">
+                            <div className="text-3xl sm:text-4xl md:text-5xl font-bold">1500+</div>
+                            <div className="text-blue-100 text-xs sm:text-sm uppercase tracking-wider leading-tight">Happy Students</div>
                         </div>
-                        <div className="space-y-2">
-                            <div className="text-5xl font-bold">3000+</div>
-                            <div className="text-blue-100 text-sm uppercase tracking-wider">Proud Parents</div>
+                        <div className="space-y-1 sm:space-y-2">
+                            <div className="text-3xl sm:text-4xl md:text-5xl font-bold">3000+</div>
+                            <div className="text-blue-100 text-xs sm:text-sm uppercase tracking-wider leading-tight">Proud Parents</div>
                         </div>
-                        <div className="space-y-2">
-                            <div className="text-5xl font-bold">50+</div>
-                            <div className="text-blue-100 text-sm uppercase tracking-wider">Classes</div>
+                        <div className="space-y-1 sm:space-y-2">
+                            <div className="text-3xl sm:text-4xl md:text-5xl font-bold">50+</div>
+                            <div className="text-blue-100 text-xs sm:text-sm uppercase tracking-wider leading-tight">Classes</div>
                         </div>
                     </div>
                 </div>

@@ -74,9 +74,9 @@ const HeroSlider: React.FC = () => {
 
     return (
         <section className="relative w-full overflow-hidden hero-slider-container">
-            <Slider {...settings} className="w-full h-[600px] lg:h-[750px] relative">
+            <Slider {...settings} className="w-full h-[480px] sm:h-[560px] md:h-[640px] lg:h-[750px] relative">
                 {slides.map((slide) => (
-                    <div key={slide.id} className="relative w-full h-[600px] lg:h-[750px] outline-none">
+                    <div key={slide.id} className="relative w-full h-[480px] sm:h-[560px] md:h-[640px] lg:h-[750px] outline-none">
                         {/* Background Image */}
                         <div className="absolute inset-0 w-full h-full">
                             <Image
@@ -84,40 +84,40 @@ const HeroSlider: React.FC = () => {
                                 alt={slide.title}
                                 fill
                                 priority={slide.id === 1}
-                                className="object-cover"
+                                className="object-cover object-center"
                                 quality={90}
                             />
-                            {/* Overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
+                            {/* Overlay — heavier on mobile for readability */}
+                            <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/20 sm:to-transparent"></div>
                         </div>
 
                         {/* Content */}
-                        <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center">
-                            <div className="max-w-3xl space-y-6 animate-fadeInUp">
-                                <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-4 py-2 rounded-full border border-white/30 w-fit">
-                                    <Icon icon="mdi:school-outline" className="text-white text-xl" />
-                                    <span className="text-sm font-medium text-white">Excellence in Education</span>
+                        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center">
+                            <div className="max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-3xl space-y-3 sm:space-y-5 lg:space-y-6">
+                                <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-3 py-1.5 sm:px-4 sm:py-2 rounded-full border border-white/30 w-fit">
+                                    <Icon icon="mdi:school-outline" className="text-white text-base sm:text-xl" />
+                                    <span className="text-xs sm:text-sm font-medium text-white">Excellence in Education</span>
                                 </div>
 
-                                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight drop-shadow-lg">
+                                <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight drop-shadow-lg">
                                     {slide.title}
                                 </h1>
 
-                                <p className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-2xl drop-shadow-md">
+                                <p className="text-sm sm:text-base md:text-lg text-gray-200 leading-relaxed max-w-lg sm:max-w-xl drop-shadow-md line-clamp-3 sm:line-clamp-none">
                                     {slide.subtitle}
                                 </p>
 
-                                <div className="flex flex-wrap gap-4 pt-4">
+                                <div className="flex flex-col xs:flex-row flex-wrap gap-3 pt-2 sm:pt-4">
                                     <Link
                                         href={slide.cta.href}
-                                        className="group inline-flex items-center gap-2 bg-primary hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+                                        className="group inline-flex items-center justify-center gap-2 bg-primary hover:bg-blue-700 active:bg-blue-800 text-white px-5 py-3 sm:px-7 sm:py-3.5 md:px-8 md:py-4 rounded-full font-semibold text-sm sm:text-base shadow-lg transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 touch-manipulation"
                                     >
                                         {slide.cta.text}
-                                        <Icon icon="mdi:arrow-right" className="text-xl group-hover:translate-x-1 transition-transform" />
+                                        <Icon icon="mdi:arrow-right" className="text-lg sm:text-xl group-hover:translate-x-1 transition-transform" />
                                     </Link>
                                     <Link
                                         href={slide.secondaryCta.href}
-                                        className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold border-2 border-white/30 hover:border-white transition-all duration-300"
+                                        className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/25 active:bg-white/30 backdrop-blur-sm text-white px-5 py-3 sm:px-7 sm:py-3.5 md:px-8 md:py-4 rounded-full font-semibold text-sm sm:text-base border-2 border-white/30 hover:border-white transition-all duration-300 touch-manipulation"
                                     >
                                         {slide.secondaryCta.text}
                                     </Link>
@@ -131,13 +131,26 @@ const HeroSlider: React.FC = () => {
 
             <style jsx global>{`
         .hero-slider-container .slick-dots {
-          bottom: 30px;
+          bottom: 16px;
           z-index: 20;
         }
+        @media (min-width: 768px) {
+          .hero-slider-container .slick-dots {
+            bottom: 30px;
+          }
+        }
+        .hero-slider-container .slick-dots li {
+          margin: 0 3px;
+        }
         .hero-slider-container .slick-dots li button:before {
-          font-size: 12px;
+          font-size: 10px;
           color: white;
           opacity: 0.5;
+        }
+        @media (min-width: 768px) {
+          .hero-slider-container .slick-dots li button:before {
+            font-size: 12px;
+          }
         }
         .hero-slider-container .slick-dots li.slick-active button:before {
           color: white;
@@ -146,9 +159,9 @@ const HeroSlider: React.FC = () => {
         .hero-slider-container .slick-prev,
         .hero-slider-container .slick-next {
           z-index: 20;
-          width: 50px;
-          height: 50px;
-          background: rgba(255, 255, 255, 0.1);
+          width: 40px;
+          height: 40px;
+          background: rgba(255, 255, 255, 0.15);
           backdrop-filter: blur(5px);
           border-radius: 50%;
           transition: all 0.3s;
@@ -156,22 +169,40 @@ const HeroSlider: React.FC = () => {
           align-items: center;
           justify-content: center;
         }
+        @media (min-width: 768px) {
+          .hero-slider-container .slick-prev,
+          .hero-slider-container .slick-next {
+            width: 50px;
+            height: 50px;
+          }
+        }
         .hero-slider-container .slick-prev:hover, 
         .hero-slider-container .slick-next:hover {
-            background: rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.35);
         }
         .hero-slider-container .slick-prev {
-          left: 30px;
+          left: 12px;
+        }
+        @media (min-width: 768px) {
+          .hero-slider-container .slick-prev { left: 30px; }
         }
         .hero-slider-container .slick-next {
-          right: 30px;
+          right: 12px;
+        }
+        @media (min-width: 768px) {
+          .hero-slider-container .slick-next { right: 30px; }
         }
         .hero-slider-container .slick-prev:before,
         .hero-slider-container .slick-next:before {
-            font-size: 24px;
+            font-size: 20px;
         }
-        
-        @media (max-width: 768px) {
+        @media (min-width: 768px) {
+          .hero-slider-container .slick-prev:before,
+          .hero-slider-container .slick-next:before {
+              font-size: 24px;
+          }
+        }
+        @media (max-width: 480px) {
             .hero-slider-container .slick-prev,
             .hero-slider-container .slick-next {
                 display: none !important;

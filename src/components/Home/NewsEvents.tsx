@@ -50,18 +50,18 @@ const NewsEvents: React.FC = () => {
     };
 
     return (
-        <section className="py-20 bg-white">
-            <div className="container mx-auto px-4 lg:max-w-screen-xl">
+        <section className="py-12 sm:py-16 md:py-20 bg-white">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-screen-xl">
                 {/* Section Header */}
-                <div className="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
-                    <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider bg-blue-50 px-4 py-2 rounded-full inline-block mb-4">
+                <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14 lg:mb-16 px-2" data-aos="fade-up">
+                    <span className="text-blue-600 font-semibold text-xs sm:text-sm uppercase tracking-wider bg-blue-50 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full inline-block mb-3 sm:mb-4">
                         Latest Updates
                     </span>
-                    <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
                         News &
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600"> Events</span>
                     </h2>
-                    <p className="text-lg text-gray-600">
+                    <p className="text-base sm:text-lg text-gray-600">
                         Stay updated with the latest happenings, achievements, and events at Excellence Academy.
                     </p>
                 </div>
@@ -115,23 +115,23 @@ const NewsEvents: React.FC = () => {
                 <div className="text-center" data-aos="fade-up">
                     <Link
                         href="/life-at-school/calendar"
-                        className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                        className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 active:from-blue-800 active:to-blue-900 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 touch-manipulation"
                     >
                         View All News & Events
-                        <Icon icon="mdi:arrow-right" className="text-xl" />
+                        <Icon icon="mdi:arrow-right" className="text-lg sm:text-xl" />
                     </Link>
                 </div>
 
                 {/* Quick Links Section */}
-                <div className="mt-20 grid md:grid-cols-3 gap-6" data-aos="fade-up">
+                <div className="mt-12 sm:mt-16 lg:mt-20 grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 lg:gap-6" data-aos="fade-up">
                     <Link
                         href="/life-at-school/calendar"
-                        className="group bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl p-8 text-white hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+                        className="group bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl sm:rounded-2xl p-6 sm:p-7 lg:p-8 text-white hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 sm:hover:-translate-y-2 touch-manipulation block"
                     >
-                        <Icon icon="mdi:calendar-month" className="text-5xl mb-4 group-hover:scale-110 transition-transform" />
-                        <h3 className="text-2xl font-bold mb-2">School Calendar</h3>
-                        <p className="text-blue-100 mb-4">View upcoming events and important dates</p>
-                        <span className="inline-flex items-center gap-2 font-semibold">
+                        <Icon icon="mdi:calendar-month" className="text-4xl sm:text-5xl mb-3 sm:mb-4 group-hover:scale-110 transition-transform block" />
+                        <h3 className="text-xl sm:text-2xl font-bold mb-1 sm:mb-2">School Calendar</h3>
+                        <p className="text-blue-100 text-sm sm:text-base mb-3 sm:mb-4">View upcoming events and important dates</p>
+                        <span className="inline-flex items-center gap-2 font-semibold text-sm sm:text-base">
                             View Calendar
                             <Icon icon="mdi:arrow-right" className="group-hover:translate-x-2 transition-transform" />
                         </span>
@@ -139,12 +139,12 @@ const NewsEvents: React.FC = () => {
 
                     <Link
                         href="/academics/achievements"
-                        className="group bg-gradient-to-br from-green-500 to-green-600 rounded-2xl p-8 text-white hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+                        className="group bg-gradient-to-br from-green-500 to-green-600 rounded-xl sm:rounded-2xl p-6 sm:p-7 lg:p-8 text-white hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 sm:hover:-translate-y-2 touch-manipulation block"
                     >
-                        <Icon icon="mdi:trophy-variant" className="text-5xl mb-4 group-hover:scale-110 transition-transform" />
-                        <h3 className="text-2xl font-bold mb-2">Achievements</h3>
-                        <p className="text-green-100 mb-4">Celebrate our students' success stories</p>
-                        <span className="inline-flex items-center gap-2 font-semibold">
+                        <Icon icon="mdi:trophy-variant" className="text-4xl sm:text-5xl mb-3 sm:mb-4 group-hover:scale-110 transition-transform block" />
+                        <h3 className="text-xl sm:text-2xl font-bold mb-1 sm:mb-2">Achievements</h3>
+                        <p className="text-green-100 text-sm sm:text-base mb-3 sm:mb-4">Celebrate our students' success stories</p>
+                        <span className="inline-flex items-center gap-2 font-semibold text-sm sm:text-base">
                             View Achievements
                             <Icon icon="mdi:arrow-right" className="group-hover:translate-x-2 transition-transform" />
                         </span>
@@ -152,12 +152,12 @@ const NewsEvents: React.FC = () => {
 
                     <Link
                         href="/admissions"
-                        className="group bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl p-8 text-white hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+                        className="group bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl sm:rounded-2xl p-6 sm:p-7 lg:p-8 text-white hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 sm:hover:-translate-y-2 touch-manipulation block sm:col-span-2 md:col-span-1"
                     >
-                        <Icon icon="mdi:school" className="text-5xl mb-4 group-hover:scale-110 transition-transform" />
-                        <h3 className="text-2xl font-bold mb-2">Admissions Open</h3>
-                        <p className="text-purple-100 mb-4">Join our learning community today</p>
-                        <span className="inline-flex items-center gap-2 font-semibold">
+                        <Icon icon="mdi:school" className="text-4xl sm:text-5xl mb-3 sm:mb-4 group-hover:scale-110 transition-transform block" />
+                        <h3 className="text-xl sm:text-2xl font-bold mb-1 sm:mb-2">Admissions Open</h3>
+                        <p className="text-purple-100 text-sm sm:text-base mb-3 sm:mb-4">Join our learning community today</p>
+                        <span className="inline-flex items-center gap-2 font-semibold text-sm sm:text-base">
                             Apply Now
                             <Icon icon="mdi:arrow-right" className="group-hover:translate-x-2 transition-transform" />
                         </span>

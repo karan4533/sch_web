@@ -17,40 +17,40 @@ const previewImages = [
 
 const SchoolGallery: React.FC = () => {
     return (
-        <section className="py-20 bg-gray-50 dark:bg-gray-900">
-            <div className="container mx-auto px-4 lg:max-w-screen-xl">
+        <section className="py-12 sm:py-16 md:py-20 bg-gray-50 dark:bg-gray-900">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-screen-xl">
                 {/* Header */}
-                <div className="text-center mb-12">
-                    <div className="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-4">
-                        <Icon icon="mdi:image-multiple" className="text-lg" />
+                <div className="text-center mb-8 sm:mb-10 lg:mb-12">
+                    <div className="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium mb-3 sm:mb-4">
+                        <Icon icon="mdi:image-multiple" className="text-base sm:text-lg" />
                         School Life
                     </div>
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-3 sm:mb-4">
                         Explore Our School
                     </h2>
-                    <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-lg">
+                    <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-sm sm:text-base md:text-lg px-2">
                         A glimpse into the vibrant life at Nam Vidhya Mandir — from classrooms to playgrounds, every moment is a memory.
                     </p>
                 </div>
 
                 {/* Preview Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-10">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3 lg:gap-4 mb-8 sm:mb-10">
                     {previewImages.map((src, index) => (
                         <div
                             key={index}
-                            className="relative aspect-square rounded-2xl overflow-hidden group shadow-md hover:shadow-xl transition-shadow duration-300"
+                            className="relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden group shadow-md hover:shadow-xl transition-shadow duration-300"
                         >
                             <Image
                                 src={src}
                                 alt={`School photo ${index + 1}`}
                                 fill
                                 className="object-cover group-hover:scale-110 transition-transform duration-500"
-                                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                             />
                             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
                                 <Icon
                                     icon="mdi:magnify-plus-outline"
-                                    className="text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg"
+                                    className="text-white text-3xl sm:text-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg"
                                 />
                             </div>
                         </div>
@@ -61,13 +61,13 @@ const SchoolGallery: React.FC = () => {
                 <div className="text-center">
                     <Link
                         href="/gallery"
-                        className="inline-flex items-center gap-3 bg-primary hover:bg-blue-700 text-white px-10 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                        className="inline-flex items-center gap-2 sm:gap-3 bg-primary hover:bg-blue-700 active:bg-blue-800 text-white px-7 py-3.5 sm:px-10 sm:py-4 rounded-full font-semibold text-sm sm:text-base lg:text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 touch-manipulation"
                     >
-                        <Icon icon="mdi:image-album" className="text-2xl" />
+                        <Icon icon="mdi:image-album" className="text-xl sm:text-2xl" />
                         View All Photos
-                        <Icon icon="mdi:arrow-right" className="text-xl" />
+                        <Icon icon="mdi:arrow-right" className="text-lg sm:text-xl" />
                     </Link>
-                    <p className="text-gray-400 dark:text-gray-500 mt-3 text-sm">
+                    <p className="text-gray-400 dark:text-gray-500 mt-2 sm:mt-3 text-xs sm:text-sm">
                         30+ photos from school events & activities
                     </p>
                 </div>
