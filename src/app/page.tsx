@@ -5,6 +5,7 @@ import VideoSection from "@/components/Home/VideoSection";
 import WhyChooseUs from "@/components/Home/WhyChooseUs";
 import NewsEvents from "@/components/Home/NewsEvents";
 import Testimonial from "@/components/Home/Testimonials";
+import SchoolGallery from "@/components/Home/SchoolGallery";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -19,6 +20,7 @@ export default function Home() {
       <SchoolIntro />
       <VideoSection />
       <WhyChooseUs />
+      <SchoolGallery />
       <NewsEvents />
       <Testimonial />
     </main>

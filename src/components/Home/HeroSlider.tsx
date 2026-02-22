@@ -54,6 +54,22 @@ const HeroSlider: React.FC = () => {
             cta: { text: "Meet Our Team", href: "/faculty" },
             secondaryCta: { text: "Join Us", href: "/careers" },
         },
+        {
+            id: 5,
+            image: "/images/hero%20page/DSC_2392.JPG.jpeg",
+            title: "Our Vibrant Campus",
+            subtitle: "A nurturing environment where every corner inspires curiosity, creativity, and a spirit of excellence in our students.",
+            cta: { text: "Explore Campus", href: "/amenities/campus" },
+            secondaryCta: { text: "View Gallery", href: "/gallery" },
+        },
+        {
+            id: 6,
+            image: "/images/hero%20page/f66b469f-ea91-4e38-a683-c8902824b124.jpg",
+            title: "Vibrant School Life",
+            subtitle: "A home away from home where every student feels valued, celebrated, and supported in their journey.",
+            cta: { text: "Explore School", href: "/gallery" },
+            secondaryCta: { text: "Events", href: "/events" },
+        },
     ];
 
     return (
